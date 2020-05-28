@@ -1,0 +1,53 @@
+package com.example.test;
+
+public class Calculator {
+    private int a;
+    private int b;
+
+    public Calculator() {
+    }
+    public Calculator(int a, int b) {
+        this.a = a;
+        this.b = b;
+    }
+
+    public void add(int a, int b){
+
+
+            if(a>0&&b>0) {
+                int sum = a + b;
+                System.out.println("Addition :"+sum);
+            }else {
+                throw new ArithmeticException();
+            }
+    }
+
+    public void  Subtract(int a, int b){
+
+        if(a>0&&b>0) {
+            int sub = a - b;
+            System.out.println("Subtraction: "+sub);
+        }else {
+            throw new ArithmeticException();
+        }
+    }
+
+    public void Multiply(int a, int b){
+
+            if (a!=0&&b!=0) {
+                System.out.println("Multiples :" + a * b);
+            }else {
+                throw new ArithmeticException();
+            }
+    }
+
+    public void Division(int a,int b){
+        if (a!=0&&b!=0) {
+            System.out.println("Division :" + a / b);
+        }else {
+            throw new ArithmeticException();
+        }
+    }
+
+
+}

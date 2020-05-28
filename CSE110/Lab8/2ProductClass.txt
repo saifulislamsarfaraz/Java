@@ -1,0 +1,27 @@
+package com.example.test;
+
+import java.util.Scanner;
+
+public class Product {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        try {
+            Product product = new Product();
+            int n = scanner.nextInt();
+            product.ProductCheck(n);
+            //System.out.println(n);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
+    }
+    public void ProductCheck(int weight) throws Exception {
+            if(weight<100){
+               throw new Exception("Product Invalid");
+            }else {
+                System.out.println(weight);
+            }
+    }
+}

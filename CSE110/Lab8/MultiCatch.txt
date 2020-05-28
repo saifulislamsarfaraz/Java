@@ -1,0 +1,16 @@
+package com.example.test;
+
+
+import java.io.IOException;
+
+public class Main {
+
+    public static void main(String[] args) {
+        try{
+            int a[]=new int[5];
+            a[4]=30/0;
+        } catch( ArithmeticException|ArrayIndexOutOfBoundsException e){
+            System.out.println(e);
+        }
+    }
+}

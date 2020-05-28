@@ -1,0 +1,27 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        try{
+            Scanner scanner = new Scanner(System.in);
+            Calculator obj1 = new Calculator();
+            Calculator obj2 = new Calculator();
+            Calculator obj3 = new Calculator();
+            Calculator obj4 = new Calculator();
+            System.out.println("Please Enter Two Numbers");
+            obj1.add(scanner.nextInt(),scanner.nextInt());
+            System.out.println("Please Enter Two Numbers");
+            obj2.Subtract(scanner.nextInt(),scanner.nextInt());
+            System.out.println("Please Enter Two Numbers");
+            obj3.Multiply(65,32);
+            System.out.println("Please Enter Two Numbers");
+            obj4.Division(20,0);
+        }catch (InputMismatchException e){
+            System.out.println("informs the user of the wrong input before exiting");
+            throw new InputMismatchException();
+
+        }
+    }
+}
