@@ -1,0 +1,29 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package p7;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author royar
+ */
+public class P7 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int i;
+       Scanner in=new Scanner(System.in);
+        System.out.println("enter a:");
+         int a=in.nextInt();
+        for(i=1;i<11;i++){
+            System.out.println(a*i);
+    }
+    
+}
+}

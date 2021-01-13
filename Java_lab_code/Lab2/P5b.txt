@@ -1,0 +1,35 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package p5b;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author royar
+ */
+public class P5b {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+          Scanner in =new Scanner(System.in);
+        System.out.println("enter the n terms of star: ");
+        int n=in.nextInt();
+        for(int i=n;i>=1;i--){
+            for(int j=1; j<=n-i;j++)
+            {
+                System.out.print(" ");
+            }
+            for(int k=1;k<=i;k++){
+                System.out.print(k+"");
+            }
+            System.out.println("");
+        }  
+    }
+    
+}

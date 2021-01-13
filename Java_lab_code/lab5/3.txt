@@ -1,0 +1,72 @@
+
+package s.pkg3;
+
+import java.util.Scanner;
+
+public class S3 {
+
+    
+    public static void main(String[] args) {
+        int sum=0;
+        Scanner in =new Scanner(System.in);
+        int m=in.nextInt();
+        int n=in.nextInt();
+        int fa[][]=new int[m][n];
+        System.out.println("first a: ");
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+            fa[i][j]=in.nextInt();
+        }
+        }
+         System.out.println("The matrix is :");
+	 for(int i=0; i<m; i++)
+	 {
+	   for(int j=0; j<n ; j++){
+	                System.out.print(fa[i][j]+" ");
+           }
+	            System.out.println();
+	 }
+        System.out.println("");
+        int p=in.nextInt();
+        int q=in.nextInt();
+        if(n!=p)
+            System.out.println("the matrix can not be multiplyied:");
+       else
+        {
+            int sa[][]=new int[p][q];
+            int mul[][]=new int[m][q];
+            System.out.println("second a: ");
+            for (int i = 0; i < p; i++) {
+                for (int j = 0; j < q; j++) {
+                    sa[i][j]=in.nextInt();
+                }
+            }
+             System.out.println("The matrix is :");
+	 for(int i=0; i<p; i++)
+	 {
+	   for(int j=0; j<q ; j++){
+	                System.out.print(sa[i][j]+" ");
+           }
+	            System.out.println();
+	 }
+            for (int i = 0; i < m; i++) {
+                for (int j = 0; j < q; j++) {
+                    for (int k = 0; k < p; k++) {
+                        sum=sum+fa[i][k]*sa[k][j];
+                        mul[i][j]=sum;
+                        sum=0;
+                        
+                    }
+                    
+                }
+            }
+            for (int i = 0; i < m; i++) {
+                for (int j = 0; j < q; j++) {
+                    System.out.println(mul[i][j]+" ");
+                }
+                System.out.println("");
+            }
+        }
+    }
+}
+

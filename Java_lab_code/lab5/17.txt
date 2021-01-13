@@ -1,0 +1,103 @@
+
+package lab5;
+
+import java.util.Scanner;
+
+ class Complex{
+
+private double realPart,imaginaryPart;
+
+Complex(){}
+
+Complex(double realPart,double imaginaryPart){
+
+this.imaginaryPart=imaginaryPart;
+this.realPart=realPart;
+}
+public void setRealPart (double realPart){
+this.realPart=realPart;
+} 
+
+public double getRealPart(){
+
+return this.realPart;
+}
+public void setimaginaryPart (double imaginaryPart){
+this.imaginaryPart=imaginaryPart;
+} 
+String ToString(){
+
+return this.realPart+"+"+this.imaginaryPart+'i';
+
+}
+public double getimaginaryPart(){
+
+return this.imaginaryPart;
+}
+public Complex add (Complex I){
+    Complex result=new Complex();
+    result.realPart=this.realPart+I.realPart;
+    result.imaginaryPart=this.imaginaryPart+I.imaginaryPart;
+return result;
+}
+public Complex subtract (Complex I){
+ Complex result=new Complex();
+    result.realPart=this.realPart-I.realPart;
+    result.imaginaryPart=this.imaginaryPart-I.imaginaryPart;
+return result;
+}
+public Complex multiply(Complex I){
+ Complex result=new Complex();
+    result.realPart=this.realPart*I.realPart-this.imaginaryPart*I.imaginaryPart;
+    result.imaginaryPart=this.realPart*I.imaginaryPart+this.imaginaryPart*I.realPart;
+return result;}
+public Complex divide (Complex I){
+ Complex result=new Complex();
+    result.realPart=(this.realPart*I.realPart-this.imaginaryPart*I.imaginaryPart)/((I.realPart)*(I.realPart)+(I.imaginaryPart)*(I.imaginaryPart));
+    result.imaginaryPart=(this.realPart*I.imaginaryPart+this.imaginaryPart*I.realPart)/((I.realPart)*(I.realPart)+(I.imaginaryPart)*(I.imaginaryPart));
+    
+    //a=(((s1.rel)*(s2.rel))+((s1.img)*(s2.img)))/(pow(s2.rel,2)+pow(s2.img,2));
+//b=(((s2.rel)*(s1.img))-((s1.rel)*(s2.img)))/(pow(s2.rel,2)+pow(s2.img,2));
+return result;}
+
+}
+public class ComplexDemo {
+    public static void main(String[] args) {
+        int k=0;
+    Complex[] complexOb = new Complex[2];
+    Complex[] result = new Complex[4];
+    Scanner input=new Scanner(System.in);
+        for (int i = 0; i < 2; i++) {
+            System.out.println("Enter  realpart ");
+            double x=input.nextDouble();
+            System.out.println("Enter Imaginarypart");
+            double y=input.nextDouble();
+             complexOb[i] = new Complex();
+           complexOb[i].setRealPart(x);
+            complexOb[i].setimaginaryPart(y);
+            
+        }
+        System.out.print("the two Imaginary numbers are:");
+        for (int i = 0; i < 2; i++) {
+            System.out.println(complexOb[i].ToString()); 
+        }
+        System.out.println("");
+       // result.addFraction1(fractionArray);
+       result[k]= complexOb[0].add(complexOb[1]);
+      
+        System.out.println("Addition: "+result[k].ToString());
+        k++;
+        result[k]= complexOb[0].subtract(complexOb[1]);
+      
+        System.out.println("Subtraction: "+result[k].ToString());
+        k++;
+        result[k]= complexOb[0].multiply(complexOb[1]);
+      
+        System.out.println("Multiplication: "+result[k].ToString());
+        k++;
+        result[k]= complexOb[0].divide(complexOb[1]);
+      
+        System.out.println("Division: "+result[k].ToString());
+        k++;
+    }
+}

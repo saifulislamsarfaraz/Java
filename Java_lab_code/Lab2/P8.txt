@@ -1,0 +1,38 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package p8;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author royar
+ */
+public class P8 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int i, num, sum=0;
+        Scanner in =new Scanner(System.in);
+        System.out.println("enter num: "); 
+        int n=in.nextInt();
+        for( i=n;n!=0;n=n/10){
+          num= n%10;
+          sum=sum*10+num;
+        } 
+        if(i==sum)
+            System.out.println("it is a palindrome");
+        else
+            System.out.println(" not a palindrome");
+            
+            
+        
+        
+    }
+    
+}

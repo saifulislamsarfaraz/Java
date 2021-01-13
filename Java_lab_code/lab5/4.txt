@@ -1,0 +1,42 @@
+
+package s4;
+
+import java.util.Scanner;
+
+
+public class S4 {
+
+    
+    public static void main(String[] args) {
+        int sum1 =0, sum2 =0;
+       Scanner input = new Scanner(System.in);
+        System.out.println("enter matrix: ");
+    int size = input.nextInt();
+    int [][]a = new  int [size][size];
+     for (int i=0; i<size; i++)
+    {
+      for (int j=0; j<size;j++)
+      {
+        a[i][j] = input.nextInt();
+      }
+    }
+      
+    for (int i=0; i<size; i++)
+    {
+      for (int j=0; j<size;j++)
+      {
+        if (i==j)
+          sum1 = sum1 + a[i][j];
+         
+        else if ((i+j)==(size-1))
+         sum2 = sum2 + a[i][j];
+         
+        else
+          continue;
+      }
+    }
+     
+   
+    System.out.println ("Right Diagonal Sum= "+sum2);                    
+    }
+}

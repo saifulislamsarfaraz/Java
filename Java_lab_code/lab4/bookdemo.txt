@@ -1,0 +1,122 @@
+package bookdemo;
+
+import java.util.Random;
+import java.util.Scanner;
+
+class Book{
+private int id;
+private String bookTitle;
+private int pages ;
+private int count;
+Random rand = new Random();
+
+Book(){
+}
+Book(String bookTitle,int pages,int count){
+    id= rand.nextInt(1000);
+this.bookTitle=bookTitle;
+this.pages=pages;
+this.count=count;
+
+}
+
+String getbookTitle(){
+return this.bookTitle;
+}
+
+void setbookTitle( String bookTitle){
+
+this.bookTitle= bookTitle;
+
+}
+int getpages(){
+return this.pages;
+}
+
+void setpages( int pages){
+
+this.pages= pages;
+
+}
+
+int getcount(){
+return this.count;
+}
+
+void setcount( int count){
+
+this.count= count;
+
+}
+
+int getid(){
+return this.id;
+}
+
+public String toString(){
+
+return this.id+" "+this.bookTitle+" "+this.pages+" "+this.count;
+
+}
+
+boolean isHeavy (Book I){
+    if(this.pages>500)
+    return true;
+    else
+        return false;
+    
+}
+
+int compareTo(Book I){
+if(this.pages==I.pages)
+    return 0;
+            else if(this.pages> I.pages)
+                return 1;
+            else 
+                return -1;
+
+}
+
+
+void  displayAll(){
+    System.out.print("id:"+this.id+"\n BookTitle:"+this.bookTitle+"\n pages:"+this.pages+"\n count:"+this.count);
+    System.out.println("");
+}
+
+}
+
+
+
+
+public class BookDemo {
+    
+   static  boolean  isHeavy (Book I){
+    if(I.getpages()<=500)
+        return false;
+    else
+        return true;
+    
+}
+
+    public static void main(String[] args) {
+       Book[] bookArray= new Book[5];
+       Scanner in=new Scanner(System.in);
+       
+        for(int i=0;i<5;i++){
+            System.out.println("name");
+        String name=in.nextLine();
+         System.out.println("page");
+         int page=in.nextInt();
+          System.out.println("count");
+        int count=in.nextInt();
+        in.nextLine();
+        bookArray[i]= new Book(name,page,count);
+        }
+       for(int i=0;i<2;i++){
+        bookArray[i].displayAll();}
+       
+        System.out.println(" Comparision result : "+bookArray[0].compareTo(bookArray[1]));
+        System.out.println("isHeavy:"+isHeavy(bookArray[1]));
+       
+    }
+    

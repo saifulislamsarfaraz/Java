@@ -1,0 +1,48 @@
+
+package lab5;
+
+import java.util.Scanner;
+public class q11 {
+    public static void main(String[] args) {
+        String pass;
+        char ch;
+        int count=0;
+        Scanner input=new Scanner(System.in);
+        System.out.println("1. A password must have at least ten characters.                                             \n" +
+"2. A password consists of only letters and digits.                                         \n" +
+"3. A password must contain at least two digits                                        ");
+        System.out.println("Input a password (You are agreeing to the above Terms and Conditions.): ");
+        
+       pass=input.nextLine();
+       
+       if(pass.length()>=10){
+           for (int i = 0; i < pass.length(); i++) {
+               ch=pass.charAt(i);
+               if(!(ch>='0'&&ch<='9')&&!(ch>='a'&&ch<='z')&&!(ch>='A'&&ch<='Z')){
+                   System.out.println("Password  is not valid :"+pass);
+                  
+                   System.exit(0);}
+               
+               if(ch>='0'&&ch<='9')
+               { count++;
+               
+               }
+           }
+       if(count<2)
+       {System.out.println("Password  is not valid :"+pass);
+      
+                   System.exit(0);}
+       
+       else
+       {  System.out.println("Password  is valid :"+pass);
+     
+       }
+       }
+       
+       else
+       { System.out.println("Password  is not valid :"+pass);
+       
+       }
+        
+    }
+}

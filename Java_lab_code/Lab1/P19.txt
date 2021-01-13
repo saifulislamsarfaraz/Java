@@ -1,0 +1,40 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package p19;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author royar
+ */
+public class P19 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+         Scanner in =new Scanner(System.in);
+      System.out.println("enter a:");
+      int a=in.nextInt();
+      System.out.println("enter b:");
+      int b=in.nextInt();
+      System.out.println("enter c:");
+       int c=in.nextInt();   
+       if(a>=20 ||b>=20 ||c>=20){
+           if(a-b>=20 ||b-c>=20 ||c-a>=20){
+               System.out.println("true");
+           }
+               else{
+                     System.out.println("false");
+               }
+           }
+           else{
+               System.out.println("false");  
+           }
+       }
+           
+    }

@@ -1,0 +1,124 @@
+
+package lab5;
+
+import java.util.Random;
+import java.util.Scanner;
+class Author{
+private String firstName,lastName;
+    
+    
+Author(String firstName,String lastName){
+   
+this.firstName=firstName;
+this.lastName=lastName;
+
+
+}
+String getfirstName(){
+return this.firstName;
+}
+
+void setfirstName( String firstName){
+
+this.firstName= firstName;
+
+}
+String getlastName(){
+return this.lastName;
+}
+
+void setlastName(String lastName){
+
+this.lastName= lastName;
+
+
+
+}
+public String toString(){
+
+return this.firstName+" "+this.lastName;
+
+}
+
+
+
+
+}
+
+class Book{
+
+private String title;
+private String author;
+private double price;
+
+
+Book(){
+}
+Book(String title,String author,int price){
+   
+this.title=title;
+this.author=author;
+this.price=price;
+
+}
+
+String gettitle(){
+return this.title;
+}
+
+void settitle( String title){
+
+this.title= title;
+
+}
+String getauthor(){
+return this.author;
+}
+
+void setauthor(String author){
+
+this.author= author;
+
+}
+
+double getprice(){
+return this.price;
+}
+
+void setprice( double price){
+
+this.price= price;
+
+}
+
+
+public String toString(){
+
+return "Title :"+this.title+"\n Author :  "+this.author+"\n Price : "+this.price;
+
+}
+
+}
+
+
+
+
+public class BookDemo {
+    
+ 
+
+    public static void main(String[] args) {
+       Book book= new Book();
+       Author ob=new Author("Russel","Winderand");
+       
+       
+       book.settitle("Developing java Software");
+       book.setauthor(ob.toString());
+       book.setprice(79.75);
+       
+        System.out.println(book.toString());
+ 
+       
+    }
+    
+}

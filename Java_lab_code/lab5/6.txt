@@ -1,0 +1,39 @@
+
+package lab5;
+
+import java.util.Scanner;
+
+
+public class Q6 {
+    public static void main(String[] args) {
+        String a,b;
+        int count=0,x;
+         Scanner in=new Scanner(System.in);
+         System.out.println("Input the string ");
+         a=in.nextLine();
+         System.out.println("Input the substring to search ");
+          b=in.nextLine();
+          int l=b.length();
+          x=a.indexOf(b);
+          if(x!=-1){
+          count++;
+         
+          while(x!=-1){
+         x=a.indexOf(b,x+l);
+         if(x!=-1)
+          count++;
+          }
+             
+          
+          }
+          
+          if(count>0){
+              System.out.println("The substring  exist in the string.\n" +b+ "  has been found "+ count+" times.");
+          
+          
+          }
+          else
+              System.out.println("The substring  does not exist in the string");
+          
+    }
+}

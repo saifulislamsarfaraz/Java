@@ -1,0 +1,36 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package p21_;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author royar
+ */
+public class P21_ {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner in =new Scanner(System.in);
+        int x=in.nextInt();
+        double y=in.nextDouble();
+        long p=in.nextLong();     
+        float q=in.nextFloat();
+        double sum=x+y;
+        System.out.println("sum of two num:"+sum);
+        double average =(x+y+p+q)/4;
+         System.out.println("average of four num:"+average);
+        float sub=p-q;
+        System.out.println("sub of two num:"+sub);
+         
+ 
+        
+    }
+    
+}

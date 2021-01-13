@@ -1,0 +1,39 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package p18;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author royar
+ */
+public class P18 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner in =new Scanner(System.in);
+        System.out.println("enter year: ");
+        int year=in.nextInt();
+        if(year%400==0){
+            System.out.println("leap year");
+        }
+        else if(year%100==0){
+            System.out.println("not a leap year");
+        }
+        else if(year%4==0){
+            System.out.println(" leap year");
+        }
+        
+        else{
+            System.out.println("not aleap year");
+        }
+        
+    }
+    
+}

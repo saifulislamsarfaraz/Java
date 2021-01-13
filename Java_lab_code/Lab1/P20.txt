@@ -1,0 +1,35 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package p20;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author royar
+ */
+public class P20 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int a,b;
+        Scanner in =new Scanner(System.in);
+        System.out.println("enter a: ");
+        a=in.nextInt();
+         System.out.println("enter b: ");
+        b=in.nextInt();
+        int m=a/10, n=a%10, o=b/10, p=b%10;
+        if(m==o||m==p||n==o||n==p)
+            System.out.println("true");
+        else
+            System.out.println("false");
+        
+        
+    }
+    
+}
